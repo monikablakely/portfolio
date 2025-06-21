@@ -14,24 +14,23 @@
   <style>
     /* Page background color */
     body {
-      background-color: var(--bg-color); /* light beige same as contact page */
+      background-color: var(--bg-color); /* light beige from your CSS */
     }
 
     /* ===== Resume Page Styles ===== */
     .resume-section {
-      max-width: 600px;
+      max-width: 90%;
       margin: 4rem auto;
-      padding: 2rem;
-      background-color: transparent; /* no white behind */
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
       font-family: 'Poppins', sans-serif;
+      color: var(--dark-brown);
+      padding: 2rem;
+      border-radius: 8px;
+      /* Removed background-color and shadow here to avoid white block */
     }
 
     .resume-section h1 {
       text-align: center;
       margin-bottom: 2rem;
-      color: var(--dark-brown);
     }
 
     .resume-container {
@@ -41,12 +40,11 @@
 
     .resume-container iframe {
       width: 100%;
-      max-width: 800px;
-      height: 1000px;
+      max-width: 900px;  /* bigger */
+      height: 1200px;    /* taller */
       border: none;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      box-shadow: none;  /* removed shadow */
       border-radius: 4px;
-      background-color: transparent;
     }
 
     .updated-note {
