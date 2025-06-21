@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-  fetch('header.html')
+  fetch('./header.html')
     .then(response => {
       if (!response.ok) throw new Error('Header not found');
       return response.text();
@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
     })
     .catch(err => console.error('Error loading header:', err));
 
-  fetch('footer.html')
+  fetch('./footer.html')
     .then(response => {
       if (!response.ok) throw new Error('Footer not found');
       return response.text();
