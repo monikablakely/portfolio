@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About Me | Monika Blakely</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+
+  <style>
+    /* ===== About Page Styles ===== */
+    .about-section {
+      max-width: 900px;
+      margin: 4rem auto;
+      padding: 0 2rem;
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--bg-color);
+      color: var(--dark-brown);
+      line-height: 1.6;
+    }
+
+    .section-row {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      margin-bottom: 4rem;
+      flex-wrap: wrap;
+    }
+
+    /* For reversed layout */
+    .section-row.reverse {
+      flex-direction: row-reverse;
+    }
+
+    .about-image {
+      flex: 1 1 250px;
+      max-width: 250px;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(75, 54, 33, 0.2);
+    }
+
+    .about-text {
+      flex: 2 1 400px;
+    }
+
+    .about-text h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
+
+    .about-text p {
+      font-size: 1rem;
+      margin-bottom: 1rem;
+      color: var(--dark-brown);
+    }
+
+    @media (max-width: 768px) {
+      .section-row {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .section-row.reverse {
+        flex-direction: column;
+      }
+
+      .about-text {
+        flex: 1 1 100%;
+      }
+
+      .about-image {
+        max-width: 200px;
+        margin: 0 auto 1.5rem auto;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="projects.html">Projects</a>
+    <a href="resume.html">Resume</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <section class="about-section">
+
+    <!-- Intro Section -->
+    <div class="section-row">
+      <img src="images/your-photo.jpg" alt="Monika Blakely" class="about-image" />
+      <div class="about-text">
+        <h1>Hi, I am Monika!</h1>
+        <p>A bit about me. I'm Black and Japanese, and I grew up moving around a lot due to my dad being in the military. Living in places like Bahrain and Japan gave me a unique perspective and the chance to experience different cultures.</p>
+        <p>In my free time, I like to run my foodie page, <a href="https://www.instagram.com/contrabandkitchen" target="_blank" style="color: var(--accent); text-decoration:none;">@contrabandkitchen</a>, stay active with HYROX and running, or attending concerts since I love live music.</p>
+      </div>
+    </div>
+
+    <!-- Experience Section -->
+    <div class="section-row reverse">
+      <img src="images/experience-photo.jpg" alt="Work Experience" class="about-image" />
+      <div class="about-text">
+        <h1>My Experience</h1>
+        <p>I have a B.S. in IT with a cybersecurity concentration from George Mason University and am currently working on my M.S. in Management at GMU. I've had the chance to work across a variety of fields, including corporate, government, retail, higher education, and brand marketing.</p>
+        <p>In these roles, I've managed social media, created content, and helped develop brand strategies. At Fairfax City Economic Development, I was responsible for marketing and social media, creating content that highlighted the city’s initiatives. At General Dynamics Information Technology (GDIT), I worked on press releases, media monitoring, competitor analysis, and campaigns.</p>
+        <p>I also freelance for small businesses, helping them with digital marketing and social media. I’ve had the opportunity to collaborate with brands like Grubhub, Maybelline, and Command, promoting their products and increasing their visibility.</p>
+      </div>
+    </div>
+
+  </section>
+
+</body>
+</html>
