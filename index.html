@@ -4,10 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Monika Blakely | Portfolio</title>
-  
+
   <!-- Google Fonts: Poppins -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
-  
+
   <!-- Link to local stylesheet -->
   <link rel="stylesheet" href="style.css" />
 
@@ -30,14 +30,8 @@
 </head>
 <body>
 
-  <!-- Navigation Bar -->
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="projects.html">Projects</a>
-    <a href="resume.html">Resume</a>
-    <a href="contact.html">Contact</a>
-  </nav>
+  <!-- Header will load here -->
+  <div id="header-placeholder"></div>
 
   <!-- Hero Section -->
   <section class="hero">
@@ -46,55 +40,25 @@
     <a class="resume-btn" href="documents/monika-blakely-resume.pdf" download>Download Resume</a>
   </section>
 
-  <footer>
-    <div class="footer-content">
-      <p>© 2025 Monika Blakely</p>
-      <div class="social-links">
-        <!-- GitHub and LinkedIn SVGs here -->
-      </div>
-    </div>
+  <!-- Footer will load here -->
+  <div id="footer-placeholder"></div>
 
-    <style>
-      footer {
-        background-color: var(--dark-brown);
-        color: white;
-        padding: 1.5rem 2rem;
-        text-align: center;
-        font-family: 'Poppins', sans-serif;
-        font-size: 0.9rem;
-        margin-top: 3rem;
-      }
-      .footer-content {
-        max-width: 900px;
-        margin: 0 auto;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-wrap: wrap;
-        gap: 1rem;
-      }
-      .social-links a {
-        color: white;
-        margin-left: 1rem;
-        transition: color 0.3s ease;
-        display: inline-flex;
-        align-items: center;
-      }
-      .social-links a:hover {
-        color: var(--light-brown);
-      }
-      @media (max-width: 480px) {
-        .footer-content {
-          flex-direction: column;
-          gap: 0.5rem;
-        }
-        .social-links a {
-          margin-left: 0;
-          margin-right: 1rem;
-        }
-      }
-    </style>
-  </footer>
+  <!-- JavaScript to load header and footer -->
+  <script>
+    function loadHTML(id, url) {
+      fetch(url)
+        .then(response => {
+          if (!response.ok) throw new Error('Failed to fetch ' + url);
+          return response.text();
+        })
+        .then(data => {
+          document.getElementById(id).innerHTML = data;
+        })
+        .catch(error => console.error(error));
+    }
 
+    loadHTML('header-placeholder', 'header.html');
+    loadHTML('footer-placeholder', 'footer.html');
+  </script>
 </body>
 </html>
