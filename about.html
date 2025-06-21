@@ -59,6 +59,61 @@
       color: var(--dark-brown);
     }
 
+    /* Carousel container */
+    .carousel {
+      position: relative;
+      width: 250px;
+      height: 250px;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 0 10px rgba(75, 54, 33, 0.2);
+      flex-shrink: 0;
+    }
+
+    /* Slides container */
+    .carousel-slides {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      transition: transform 0.4s ease;
+    }
+
+    .carousel-slide {
+      min-width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 12px;
+    }
+
+    /* Navigation arrows */
+    .carousel-arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(75, 54, 33, 0.7);
+      border: none;
+      color: white;
+      font-size: 1.5rem;
+      padding: 0.3rem 0.7rem;
+      border-radius: 50%;
+      cursor: pointer;
+      user-select: none;
+      transition: background-color 0.3s ease;
+      z-index: 10;
+    }
+
+    .carousel-arrow:hover {
+      background-color: var(--accent);
+    }
+
+    .carousel-arrow.left {
+      left: 8px;
+    }
+
+    .carousel-arrow.right {
+      right: 8px;
+    }
+
     @media (max-width: 768px) {
       .section-row {
         flex-direction: column;
@@ -73,9 +128,10 @@
         flex: 1 1 100%;
       }
 
-      .about-image {
-        max-width: 200px;
+      .carousel {
         margin: 0 auto 1.5rem auto;
+        width: 200px;
+        height: 200px;
       }
     }
   </style>
@@ -103,9 +159,20 @@
       </div>
     </div>
 
-    <!-- Experience Section -->
+    <!-- Experience Section with Carousel -->
     <div class="section-row reverse">
-      <img src="images/experience-photo.jpg" alt="Work Experience" class="about-image" />
+
+      <!-- Carousel Container -->
+      <div class="carousel" id="carousel">
+        <div class="carousel-slides" id="carousel-slides">
+          <img src="images/experience1.jpg" alt="Experience 1" class="carousel-slide" />
+          <img src="images/experience2.jpg" alt="Experience 2" class="carousel-slide" />
+          <img src="images/experience3.jpg" alt="Experience 3" class="carousel-slide" />
+        </div>
+        <button class="carousel-arrow left" id="prev">&#8249;</button>
+        <button class="carousel-arrow right" id="next">&#8250;</button>
+      </div>
+
       <div class="about-text">
         <h1>My Experience</h1>
         <p>I have a B.S. in IT with a cybersecurity concentration from George Mason University and am currently working on my M.S. in Management at GMU. I've had the chance to work across a variety of fields, including corporate, government, retail, higher education, and brand marketing.</p>
@@ -115,6 +182,23 @@
     </div>
 
   </section>
+
+  <script>
+    // Simple Carousel Logic
+    const slides = document.getElementById('carousel-slides');
+    const totalSlides = slides.children.length;
+    let index = 0;
+
+    document.getElementById('prev').addEventListener('click', () => {
+      index = (index - 1 + totalSlides) % totalSlides;
+      slides.style.transform = `translateX(-${index * 100}%)`;
+    });
+
+    document.getElementById('next').addEventListener('click', () => {
+      index = (index + 1) % totalSlides;
+      slides.style.transform = `translateX(-${index * 100}%)`;
+    });
+  </script>
 
 </body>
 </html>
