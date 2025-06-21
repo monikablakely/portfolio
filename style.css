@@ -1,4 +1,4 @@
-/* Root variables for colors and sizing */
+/* Root variables */
 :root {
   --bg-color: #f5efe6;
   --light-brown: #d4bfa3;
@@ -19,17 +19,16 @@ body {
   line-height: 1.6;
 }
 
-/* Header styles */
+/* Header and Navigation */
 header {
   background-color: var(--dark-brown);
-  padding: 0;
   box-sizing: border-box;
   width: 100%;
+  padding: 0; /* Reset padding; nav will have padding */
 }
 
-/* Nav inside header */
 header nav {
-  background-color: var(--nav-bg);
+  background-color: var(--nav-bg); /* White nav background */
   padding: 1rem 2rem;
   max-width: 900px;
   margin: 0 auto;
@@ -57,44 +56,6 @@ header nav a:hover {
     gap: 1rem;
     align-items: center;
   }
-}
-
-/* Hero Section Styles */
-.hero {
-  background-color: var(--dark-brown);
-  color: white;
-  text-align: center;
-  padding: 10rem 2rem;
-}
-
-.hero h1 {
-  font-size: 4rem;
-  margin-bottom: 1rem;
-}
-
-.hero .subtitle {
-  font-size: 1.5rem;
-  color: var(--light-brown);
-  margin-bottom: 2rem;
-}
-
-/* Resume Download Button Styles */
-.resume-btn {
-  display: inline-block;
-  padding: 0.75rem 1.5rem;
-  border: 2px solid var(--light-brown);
-  color: var(--light-brown);
-  background-color: transparent;
-  border-radius: 30px;
-  font-weight: 600;
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
-
-.resume-btn:hover {
-  background-color: white;
-  color: var(--dark-brown);
-  border-color: white;
 }
 
 /* Footer styles */
