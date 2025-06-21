@@ -12,20 +12,17 @@
   <link rel="stylesheet" href="style.css" />
 
   <style>
-    /* Override or add page-specific styles */
-
-    /* Match contact page background */
+    /* Page background color */
     body {
-      background-color: var(--bg-color); /* #f5efe6 from your CSS root */
-      color: var(--dark-brown);
+      background-color: var(--bg-color); /* light beige same as contact page */
     }
 
-    /* Container like contact-section */
+    /* ===== Resume Page Styles ===== */
     .resume-section {
       max-width: 600px;
       margin: 4rem auto;
       padding: 2rem;
-      background-color: white;
+      background-color: transparent; /* no white behind */
       border-radius: 8px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
       font-family: 'Poppins', sans-serif;
@@ -37,12 +34,19 @@
       color: var(--dark-brown);
     }
 
+    .resume-container {
+      display: flex;
+      justify-content: center;
+    }
+
     .resume-container iframe {
       width: 100%;
-      height: 800px;
+      max-width: 800px;
+      height: 1000px;
       border: none;
-      border-radius: 8px;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      border-radius: 4px;
+      background-color: transparent;
     }
 
     .updated-note {
@@ -55,7 +59,7 @@
 
     @media (max-width: 768px) {
       .resume-container iframe {
-        height: 500px;
+        height: 600px;
       }
     }
   </style>
