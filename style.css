@@ -81,3 +81,70 @@ nav a:hover {
   color: var(--dark-brown);
   border-color: white;
 }
+
+/* ===== Contact Page Styles =====
+   Styles for contact form elements including inputs,
+   textarea, labels, and submit button
+   Used on contact.html page
+============================== */
+
+.contact-section {
+  max-width: 600px;
+  margin: 4rem auto;
+  padding: 0 2rem;
+  color: var(--dark-brown);
+  font-family: 'Poppins', sans-serif;
+}
+
+.contact-section h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.contact-section form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Labels */
+.contact-section label {
+  font-weight: 600;
+}
+
+/* Input and Textarea styling */
+.contact-section input,
+.contact-section textarea {
+  padding: 0.75rem 1rem;
+  border: 2px solid var(--dark-brown);
+  border-radius: 8px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  background-color: white;
+  color: var(--dark-brown);
+  resize: vertical;
+}
+
+/* Make the message box taller */
+.contact-section textarea {
+  min-height: 150px;
+}
+
+/* Submit button styling */
+.contact-section button {
+  width: 150px;
+  padding: 0.75rem;
+  font-weight: 600;
+  background-color: var(--dark-brown);
+  color: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  align-self: center;
+}
+
+.contact-section button:hover {
+  background-color: var(--light-brown);
+  color: var(--dark-brown);
+}
