@@ -8,11 +8,19 @@
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
 
-  <!-- Link to your CSS -->
+  <!-- Your main CSS -->
   <link rel="stylesheet" href="style.css" />
 
+  <!-- Define CSS variables here for safety -->
   <style>
-    /* ===== Resume Page Styles ===== */
+    :root {
+      --dark-brown: #4b3621;
+      --light-brown: #a67c00;
+      --bg-color: #fff;
+      --dark-brown: #4b3621;
+    }
+
+    /* Resume styles */
     .resume-section {
       max-width: 90%;
       margin: 4rem auto;
@@ -53,13 +61,14 @@
       }
     }
   </style>
+
+  <!-- Load header/footer loader -->
+  <script src="load-header-footer.js" defer></script>
 </head>
 <body>
 
-  <!-- Header placeholder -->
-  <div id="header-placeholder"></div>
+  <!-- Your content will be inserted below the header loaded by JS -->
 
-  <!-- Resume Section -->
   <section class="resume-section">
     <h1>My Resume</h1>
     <div class="resume-container">
@@ -68,26 +77,7 @@
     <p class="updated-note">Last updated: 6/21/2025</p>
   </section>
 
-  <!-- Footer placeholder -->
-  <div id="footer-placeholder"></div>
+  <!-- Footer will be appended by JS -->
 
-  <!-- Load header and footer dynamically -->
-  <script>
-    async function loadHTML(id, url) {
-      const response = await fetch(url);
-      if (response.ok) {
-        const html = await response.text();
-        document.getElementById(id).innerHTML = html;
-      } else {
-        console.error(`Could not load ${url}: ${response.statusText}`);
-      }
-    }
-
-    loadHTML('header-placeholder', 'header.html');
-    loadHTML('footer-placeholder', 'footer.html');
-  </script>
-  
 </body>
 </html>
-
-
