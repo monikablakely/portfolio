@@ -5,35 +5,65 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Monika Blakely | Portfolio</title>
   
+  <!-- Google Fonts: Poppins -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
   
+  <!-- Link to local stylesheet -->
   <link rel="stylesheet" href="style.css" />
-
+  
   <style>
-    /* Page layout fix */
-    html, body {
-      margin: 0;
-      padding: 0;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      font-family: 'Poppins', sans-serif;
+    :root {
+      --dark-brown: #4B3621;
+      --light-brown: #A17C56;
+      --bg-color: #f9f7f1;
     }
 
-    /* Keep hero background visible */
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--bg-color);
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    nav {
+      background-color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      gap: 1.5rem;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    nav a {
+      color: var(--dark-brown);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1rem;
+    }
+    nav a:hover {
+      color: var(--light-brown);
+    }
+
+    /* Hero Section */
     .hero {
       flex-grow: 1;
       padding: 4rem 2rem;
-      /* example background so you can see it's still visible */
-      background-color: #f9f7f1;
       display: flex;
-      flex-direction: column;
-      align-items: center;
       justify-content: center;
-      text-align: center;
+      align-items: center;
     }
 
-    /* Animate only the text container */
+    .hero-container {
+      background-color: var(--dark-brown);
+      color: white;
+      padding: 2rem 3rem;
+      border-radius: 12px;
+      text-align: center;
+      max-width: 480px;
+      width: 100%;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+
     .hero-text {
       opacity: 0;
       transform: translateY(20px);
@@ -48,7 +78,38 @@
       }
     }
 
-    /* Footer styles */
+    h1 {
+      font-size: 2.8rem;
+      margin: 0 0 0.5rem 0;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+    }
+
+    .subtitle {
+      font-size: 1.2rem;
+      margin: 0 0 1.5rem 0;
+      font-weight: 400;
+      letter-spacing: 1px;
+    }
+
+    .resume-btn {
+      display: inline-block;
+      background-color: var(--light-brown);
+      color: var(--dark-brown);
+      padding: 0.75rem 2rem;
+      border-radius: 6px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+      font-size: 1rem;
+      box-shadow: 0 4px 10px rgba(161,124,86,0.5);
+    }
+    .resume-btn:hover {
+      background-color: #8c6644;
+      box-shadow: 0 6px 12px rgba(140,102,68,0.7);
+    }
+
+    /* Footer */
     footer {
       background-color: var(--dark-brown);
       color: white;
@@ -56,7 +117,7 @@
       text-align: center;
       font-family: 'Poppins', sans-serif;
       font-size: 0.9rem;
-      margin-top: 3rem;
+      margin-top: auto;
     }
     .footer-content {
       max-width: 900px;
@@ -102,13 +163,16 @@
 
   <!-- Hero Section -->
   <section class="hero">
-    <div class="hero-text">
-      <h1>Monika Blakely</h1>
-      <p class="subtitle">IT | Cyber Security | Management</p>
-      <a class="resume-btn" href="documents/monika-blakely-resume.pdf" download>Download Resume</a>
+    <div class="hero-container">
+      <div class="hero-text">
+        <h1>Monika Blakely</h1>
+        <p class="subtitle">IT | Cyber Security | Management</p>
+        <a class="resume-btn" href="documents/monika-blakely-resume.pdf" download>Download Resume</a>
+      </div>
     </div>
   </section>
 
+  <!-- Footer -->
   <footer>
     <div class="footer-content">
       <p>© 2025 Monika Blakely</p>
