@@ -1,15 +1,21 @@
-// load-header-footer.js
-
-function loadHTML(url, elementId) {
-  fetch(url)
+document.addEventListener('DOMContentLoaded', () => {
+  // Load header.html into <header> element
+  fetch('header.html')
     .then(response => response.text())
     .then(data => {
-      document.getElementById(elementId).innerHTML = data;
+      const headerContainer = document.createElement('header');
+      headerContainer.innerHTML = data;
+      document.body.prepend(headerContainer);
     })
-    .catch(err => {
-      console.error('Failed to load ' + url, err);
-    });
-}
+    .catch(err => console.error('Error loading header:', err));
 
-loadHTML('header.html', 'header-placeholder');
-loadHTML('footer.html', 'footer-placeholder');
+  // Load footer.html into <footer> element
+  fetch('footer.html')
+    .then(response => response.text())
+    .then(data => {
+      const footerContainer = document.createElement('footer');
+      footerContainer.innerHTML = data;
+      document.body.appendChild(footerContainer);
+    })
+    .catch(err => console.error('Error loading footer:', err));
+});
