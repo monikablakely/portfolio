@@ -1,16 +1,18 @@
 <header>
   <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="projects.html">Projects</a>
-    <a href="resume.html">Resume</a>
-    <a href="contact.html">Contact</a>
+    <div>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="resume.html">Resume</a>
+      <a href="contact.html">Contact</a>
+    </div>
   </nav>
 
   <style>
     header {
       background-color: var(--dark-brown);
-      padding: 1rem 2rem;
+      padding: 0; /* Remove padding here, nav will have padding */
       font-family: 'Poppins', sans-serif;
       color: white;
       box-sizing: border-box;
@@ -18,26 +20,40 @@
     }
 
     nav {
-      max-width: 900px;
-      margin: 0 auto;
+      background-color: white; /* Full width white background */
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    nav > div {
+      max-width: 900px;  /* Limit nav link container width */
+      width: 100%;
       display: flex;
       justify-content: center;
       gap: 2rem;
     }
 
     nav a {
-      color: white;
+      color: var(--nav-text); /* dark text on white */
       text-decoration: none;
       font-weight: 600;
       transition: color 0.3s ease;
     }
 
     nav a:hover {
-      color: var(--light-brown);
+      color: var(--accent);
     }
 
     @media (max-width: 480px) {
-      nav {
+      nav > div {
         flex-direction: column;
         gap: 1rem;
         align-items: center;
