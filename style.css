@@ -1,45 +1,83 @@
-/* Hero Section Styling */
+/* Root variables for colors and sizing */
+:root {
+  --bg-color: #f5efe6;
+  --light-brown: #d4bfa3;
+  --dark-brown: #4b3621;
+  --accent: #648381;
+  --nav-bg: #ffffff;
+  --nav-text: #4b3621;
+  --heading-size: 2.5rem;
+  --text-color: #4b3621;
+}
+
+/* Reset and base styles */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+/* Navigation Bar Styles */
+nav {
+  background-color: var(--nav-bg);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav a {
+  color: var(--nav-text);
+  text-decoration: none;
+  margin: 0 1rem;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: var(--accent);
+}
+
+/* Hero Section Styles */
 .hero {
-  /* Brown background with white text */
   background-color: var(--dark-brown);
   color: white;
-  
-  /* Center-align text */
   text-align: center;
-  
-  /* Spacious padding top and bottom */
   padding: 10rem 2rem;
 }
 
-/* Large name heading */
 .hero h1 {
-  font-size: 4rem;      /* Big font size */
-  margin-bottom: 1rem;  /* Space below the heading */
+  font-size: 4rem;
+  margin-bottom: 1rem;
 }
 
-/* Subtitle styling with light brown color */
 .hero .subtitle {
-  font-size: 1.5rem;          /* Smaller than main heading */
-  color: var(--light-brown);  /* Light brown accent */
-  margin-bottom: 2rem;        /* Space below subtitle */
+  font-size: 1.5rem;
+  color: var(--light-brown);
+  margin-bottom: 2rem;
 }
 
-/* Resume download button */
+/* Resume Download Button Styles */
 .resume-btn {
-  display: inline-block;                      /* Inline block for padding */
-  padding: 0.75rem 1.5rem;                    /* Button padding */
-  border: 2px solid var(--light-brown);      /* Light brown border */
-  color: var(--light-brown);                   /* Light brown text */
-  background-color: transparent;              /* Transparent background */
-  border-radius: 30px;                        /* Rounded edges */
-  font-weight: 600;                           /* Semi-bold font */
-  text-decoration: none;                      /* Remove underline */
-  transition: all 0.3s ease;                  /* Smooth hover transition */
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border: 2px solid var(--light-brown);
+  color: var(--light-brown);
+  background-color: transparent;
+  border-radius: 30px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
 }
 
-/* Hover effect for the resume button */
 .resume-btn:hover {
-  background-color: white;                    /* White background on hover */
-  color: var(--dark-brown);                   /* Dark brown text on hover */
-  border-color: white;                        /* Border changes to white */
+  background-color: white;
+  color: var(--dark-brown);
+  border-color: white;
 }
