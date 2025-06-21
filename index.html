@@ -12,40 +12,59 @@
   <link rel="stylesheet" href="style.css" />
 
   <style>
-    /* Hero Section Animation */
-    .hero {
-      text-align: center;
-      padding: 5rem 2rem;
+    /* Fix for footer spacing and page layout */
+    html, body {
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      font-family: 'Poppins', sans-serif;
     }
 
-    .hero h1,
-    .hero .subtitle,
-    .hero .resume-btn {
-      opacity: 0;
-      transform: translateY(20px);
-      animation: fadeSlideIn 0.8s ease-out forwards;
+    body > .hero {
+      flex-grow: 1;
     }
+  </style>
+</head>
+<body>
 
-    .hero h1 {
-      animation-delay: 0.2s;
-    }
+  <!-- Navigation Bar -->
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="projects.html">Projects</a>
+    <a href="resume.html">Resume</a>
+    <a href="contact.html">Contact</a>
+  </nav>
 
-    .hero .subtitle {
-      animation-delay: 0.5s;
-    }
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Monika Blakely</h1>
+    <p class="subtitle">IT | Cyber Security | Management</p>
+    <a class="resume-btn" href="documents/monika-blakely-resume.pdf" download>Download Resume</a>
+  </section>
 
-    .hero .resume-btn {
-      animation-delay: 0.8s;
-    }
+  <footer>
+  <div class="footer-content">
+    <p>© 2025 Monika Blakely</p>
+    <div class="social-links">
+      <a href="https://monikablakely.github.io/portfolio/" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+        <!-- GitHub SVG icon -->
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.263.82-.58 0-.287-.01-1.04-.015-2.04-3.338.724-4.042-1.613-4.042-1.613-.546-1.385-1.333-1.753-1.333-1.753-1.09-.745.083-.73.083-.73 1.205.085 1.84 1.238 1.84 1.238 1.07 1.835 2.805 1.305 3.49.997.107-.774.42-1.305.763-1.605-2.665-.3-5.467-1.335-5.467-5.932 0-1.31.468-2.38 1.235-3.22-.124-.303-.535-1.522.117-3.176 0 0 1.008-.322 3.3 1.23a11.52 11.52 0 013.003-.404c1.02.005 2.045.137 3.004.404 2.29-1.552 3.296-1.23 3.296-1.23.653 1.654.242 2.873.12 3.176.77.84 1.233 1.91 1.233 3.22 0 4.61-2.807 5.63-5.48 5.922.43.37.823 1.096.823 2.21 0 1.594-.015 2.88-.015 3.27 0 .32.217.698.825.58C20.565 21.796 24 17.297 24 12c0-6.63-5.37-12-12-12z"/>
+        </svg>
+      </a>
+      <a href="https://www.linkedin.com/in/monikablakely/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+        <!-- LinkedIn SVG icon -->
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM.5 8H4.5v16H.5V8zm6.5 0h4v2.5h.1c.56-1.06 1.92-2.18 3.95-2.18 4.22 0 5 2.78 5 6.4V24H15v-8.4c0-2-0.04-4.58-2.8-4.58-2.8 0-3.22 2.18-3.22 4.44V24H6.5V8z"/>
+        </svg>
+      </a>
+    </div>
+  </div>
 
-    @keyframes fadeSlideIn {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    /* Footer styles */
+  <style>
     footer {
       background-color: var(--dark-brown);
       color: white;
@@ -85,44 +104,7 @@
       }
     }
   </style>
-</head>
-<body>
-
-  <!-- Navigation Bar -->
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="projects.html">Projects</a>
-    <a href="resume.html">Resume</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-
-  <!-- Hero Section -->
-  <section class="hero">
-    <h1>Monika Blakely</h1>
-    <p class="subtitle">IT | Cyber Security | Management</p>
-    <a class="resume-btn" href="documents/monika-blakely-resume.pdf" download>Download Resume</a>
-  </section>
-
-  <footer>
-    <div class="footer-content">
-      <p>© 2025 Monika Blakely</p>
-      <div class="social-links">
-        <a href="https://monikablakely.github.io/portfolio/" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-          <!-- GitHub SVG icon -->
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.263.82-.58 0-.287-.01-1.04-.015-2.04-3.338.724-4.042-1.613-4.042-1.613-.546-1.385-1.333-1.753-1.333-1.753-1.09-.745.083-.73.083-.73 1.205.085 1.84 1.238 1.84 1.238 1.07 1.835 2.805 1.305 3.49.997.107-.774.42-1.305.763-1.605-2.665-.3-5.467-1.335-5.467-5.932 0-1.31.468-2.38 1.235-3.22-.124-.303-.535-1.522.117-3.176 0 0 1.008-.322 3.3 1.23a11.52 11.52 0 013.003-.404c1.02.005 2.045.137 3.004.404 2.29-1.552 3.296-1.23 3.296-1.23.653 1.654.242 2.873.12 3.176.77.84 1.233 1.91 1.233 3.22 0 4.61-2.807 5.63-5.48 5.922.43.37.823 1.096.823 2.21 0 1.594-.015 2.88-.015 3.27 0 .32.217.698.825.58C20.565 21.796 24 17.297 24 12c0-6.63-5.37-12-12-12z"/>
-          </svg>
-        </a>
-        <a href="https://www.linkedin.com/in/monikablakely/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-          <!-- LinkedIn SVG icon -->
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM.5 8H4.5v16H.5V8zm6.5 0h4v2.5h.1c.56-1.06 1.92-2.18 3.95-2.18 4.22 0 5 2.78 5 6.4V24H15v-8.4c0-2-0.04-4.58-2.8-4.58-2.8 0-3.22 2.18-3.22 4.44V24H6.5V8z"/>
-          </svg>
-        </a>
-      </div>
-    </div>
-  </footer>
+</footer>
 
 </body>
 </html>
