@@ -12,54 +12,59 @@
   <link rel="stylesheet" href="style.css" />
 
   <style>
-    /* Page background color */
+    /* Page background color like contact page */
     body {
-      background-color: var(--bg-color); /* light beige from your CSS */
+      background-color: var(--bg-color);
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      color: var(--dark-brown);
     }
 
     /* ===== Resume Page Styles ===== */
     .resume-section {
       max-width: 90%;
       margin: 4rem auto;
-      font-family: 'Poppins', sans-serif;
-      color: var(--dark-brown);
-      padding: 2rem;
-      border-radius: 8px;
-      /* Removed background-color and shadow here to avoid white block */
+      padding: 0;
+      /* no background or shadow to avoid white box */
+      text-align: center;
     }
 
     .resume-section h1 {
-      text-align: center;
       margin-bottom: 2rem;
+      font-weight: 700;
     }
 
     .resume-container {
-      display: flex;
-      justify-content: center;
+      background-color: var(--bg-color);
+      padding: 1rem 0;
+      text-align: center;
     }
 
     .resume-container iframe {
-      width: 100%;
-      max-width: 900px;  /* bigger */
-      height: 1200px;    /* taller */
+      width: 612px;  /* actual PDF width for US Letter */
+      height: 792px; /* actual PDF height */
       border: none;
-      box-shadow: none;  /* removed shadow */
-      border-radius: 4px;
+      background-color: transparent;
+      display: inline-block;
+      box-shadow: none;
+    }
+
+    /* Responsive for smaller screens */
+    @media (max-width: 650px) {
+      .resume-container iframe {
+        width: 100%;
+        height: auto;
+      }
     }
 
     .updated-note {
-      text-align: center;
       font-size: 0.8rem;
       color: var(--dark-brown);
       margin-top: 1rem;
       opacity: 0.7;
     }
 
-    @media (max-width: 768px) {
-      .resume-container iframe {
-        height: 600px;
-      }
-    }
+    /* Navigation and footer inherit styles from style.css */
   </style>
 </head>
 <body>
