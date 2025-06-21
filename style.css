@@ -21,27 +21,44 @@ body {
 
 /* Navigation Bar Styles */
 nav {
-  background-color: var(--nav-bg);
+  background-color: white; /* White background spans full width */
   padding: 1rem 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
   position: sticky;
   top: 0;
   z-index: 1000;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+nav > div {
+  max-width: 900px; /* Limit width and center */
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
 }
 
 nav a {
-  color: var(--nav-text);
+  color: var(--nav-text); /* dark color for visibility */
   text-decoration: none;
-  margin: 0 1rem;
   font-weight: 600;
   transition: color 0.3s ease;
 }
 
 nav a:hover {
   color: var(--accent);
+}
+
+@media (max-width: 480px) {
+  nav > div {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+  }
 }
 
 /* Hero Section Styles */
@@ -82,12 +99,7 @@ nav a:hover {
   border-color: white;
 }
 
-/* ===== Contact Page Styles =====
-   Styles for contact form elements including inputs,
-   textarea, labels, and submit button
-   Used on contact.html page
-============================== */
-
+/* Contact Section Styles */
 .contact-section {
   max-width: 600px;
   margin: 4rem auto;
@@ -107,12 +119,10 @@ nav a:hover {
   gap: 1.5rem;
 }
 
-/* Labels */
 .contact-section label {
   font-weight: 600;
 }
 
-/* Input and Textarea styling */
 .contact-section input,
 .contact-section textarea {
   padding: 0.75rem 1rem;
@@ -125,12 +135,10 @@ nav a:hover {
   resize: vertical;
 }
 
-/* Make the message box taller */
 .contact-section textarea {
   min-height: 150px;
 }
 
-/* Submit button styling */
 .contact-section button {
   width: 150px;
   padding: 0.75rem;
@@ -147,4 +155,51 @@ nav a:hover {
 .contact-section button:hover {
   background-color: var(--light-brown);
   color: var(--dark-brown);
+}
+
+/* Footer Styles */
+footer {
+  background-color: var(--dark-brown);
+  color: white;
+  padding: 1.5rem 2rem;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.9rem;
+  margin-top: 3rem;
+  width: 100%;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.footer-content {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  box-sizing: border-box;
+}
+
+.social-links a {
+  color: white;
+  margin-left: 1rem;
+  transition: color 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+}
+
+.social-links a:hover {
+  color: var(--light-brown);
+}
+
+@media (max-width: 480px) {
+  .footer-content {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .social-links a {
+    margin-left: 0;
+    margin-right: 1rem;
+  }
 }
