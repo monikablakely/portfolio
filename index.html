@@ -8,8 +8,10 @@
   <!-- Google Fonts: Poppins -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
 
-  <!-- Link to local stylesheet -->
+  <!-- Your CSS -->
   <link rel="stylesheet" href="style.css" />
+  
+  <script src="load-header-footer.js" defer></script>
 
   <style>
     /* Fade in and slide up animation for the resume button */
@@ -30,7 +32,6 @@
 </head>
 <body>
 
-  <!-- Header will load here -->
   <div id="header-placeholder"></div>
 
   <!-- Hero Section -->
@@ -40,25 +41,7 @@
     <a class="resume-btn" href="documents/monika-blakely-resume.pdf" download>Download Resume</a>
   </section>
 
-  <!-- Footer will load here -->
   <div id="footer-placeholder"></div>
 
-  <!-- JavaScript to load header and footer -->
-  <script>
-    function loadHTML(id, url) {
-      fetch(url)
-        .then(response => {
-          if (!response.ok) throw new Error('Failed to fetch ' + url);
-          return response.text();
-        })
-        .then(data => {
-          document.getElementById(id).innerHTML = data;
-        })
-        .catch(error => console.error(error));
-    }
-
-    loadHTML('header-placeholder', 'header.html');
-    loadHTML('footer-placeholder', 'footer.html');
-  </script>
 </body>
 </html>
